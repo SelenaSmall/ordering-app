@@ -17,10 +17,12 @@ view:
 
   confirmation:
     title:      'Your order has been placed'
+    your_order: 'Your order'
 
   list:
     title:      'Orders'
     view_order: 'View order'
 
   view:
-    title:      'View order'
+    title:        'View order'
+    order_number: 'Order: %uuid%'

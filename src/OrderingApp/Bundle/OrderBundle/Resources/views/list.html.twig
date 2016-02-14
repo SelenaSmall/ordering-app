@@ -3,10 +3,10 @@
 
 {% block title %}{{ 'view.list.title'|trans }}{% endblock title %}
 
-{% block content %}
-    <h1>{{ 'view.list.title'|trans }}</h1>
+{% block header %}<h1>{{ 'view.list.title'|trans }}</h1>{% endblock %}
 
-    <table>
+{% block content %}
+    <table class="table table-bordered table-striped table-responsive">
         <thead>
             <tr>
                 <th>{{ 'entity.order.name'|trans }}</th>
@@ -19,7 +19,7 @@
             <tr>
                 <td>{{ order.name }}</td>
                 <td>{{ order.createdAt|date('d/m/Y g:ia') }}</td>
-                <td><a href="{{ url('OrderBundle:view', {uuid: order.uuid}) }}">{{ 'view.list.view_order'|trans }}</a></td>
+                <td><a class="btn btn-default btn-xs" href="{{ url('OrderBundle:view', {uuid: order.uuid}) }}">{{ 'view.list.view_order'|trans }}</a></td>
             </tr>
 {% endfor %}
         </tbody>

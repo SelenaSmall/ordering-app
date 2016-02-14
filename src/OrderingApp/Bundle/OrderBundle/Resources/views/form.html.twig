@@ -3,8 +3,9 @@
 
 {% block title %}{{ 'view.form.title'|trans }}{% endblock title %}
 
+{% block header %}<h1>{{ 'view.form.title'|trans }}</h1>{% endblock %}
+
 {% block content %}
-    <h1>{{ 'view.form.title'|trans }}</h1>
     {{ form_start(form) }}
     {{ form_widget(form) }}
 

@@ -3,21 +3,27 @@
 
 {% block title %}{{ 'view.confirmation.title'|trans }}{% endblock title %}
 
-{% block content %}
-    <h1>{{ 'view.confirmation.title'|trans }}</h1>
+{% block header %}<h1>{{ 'view.confirmation.title'|trans }}</h1>{% endblock %}
 
-    <article class="order full">
-        <dl>
-            <dt>{{ 'entity.order.name'|trans }}</dt>
-            <dd>{{ order.name }}</dd>
-            <dt>{{ 'entity.order.email'|trans }}</dt>
-            <dd>{{ order.email }}</dd>
-            <dt>{{ 'entity.order.address'|trans }}</dt>
-            <dd>{{ order.address }}</dd>
-            <dt>{{ 'entity.order.contents'|trans }}</dt>
-            <dd>{{ order.contents }}</dd>
-            <dt>{{ 'entity.order.createdAt'|trans }}</dt>
-            <dd>{{ order.createdAt|date('d/m/Y g:ia') }}</dd>
-        </dl>
+{% block content %}
+    <article class="order full panel panel-default">
+        <div class="panel-heading">
+            <h1 class="panel-title">{{ 'view.confirmation.your_order'|trans }}</h1>
+        </div>
+
+        <div class="panel-body">
+            <dl>
+                <dt>{{ 'entity.order.name'|trans }}</dt>
+                <dd>{{ order.name }}</dd>
+                <dt>{{ 'entity.order.email'|trans }}</dt>
+                <dd>{{ order.email }}</dd>
+                <dt>{{ 'entity.order.address'|trans }}</dt>
+                <dd>{{ order.address }}</dd>
+                <dt>{{ 'entity.order.contents'|trans }}</dt>
+                <dd>{{ order.contents }}</dd>
+                <dt>{{ 'entity.order.createdAt'|trans }}</dt>
+                <dd>{{ order.createdAt|date('d/m/Y g:ia') }}</dd>
+            </dl>
+        </div>
     </article>
 {% endblock content %}
