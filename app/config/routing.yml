@@ -1,3 +1,2 @@
-app:
-    resource: "@AppBundle/Controller/"
-    type:     annotation
+order_bundle:
+    resource: "../../src/OrderingApp/Bundle/OrderBundle/Resources/config/routing.yml"

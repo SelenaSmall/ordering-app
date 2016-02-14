@@ -1,0 +1,26 @@
+entity:
+  order:
+    single:     'order'
+    plural:     'orders'
+    id:         'ID'
+    uuid:       'UUID'
+    slug:       'Slug'
+    name:       'Name'
+    email:      'Email'
+    address:    'Address'
+    contents:   'Order contents'
+    createdAt:  'Order placed'
+
+view:
+  form:
+    title:      'Place your order'
+
+  confirmation:
+    title:      'Your order has been placed'
+
+  list:
+    title:      'Orders'
+    view_order: 'View order'
+
+  view:
+    title:      'View order'

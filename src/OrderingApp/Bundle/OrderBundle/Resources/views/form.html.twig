@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+{% trans_default_domain 'OrderBundle' %}
+
+{% block title %}{{ 'view.form.title'|trans }}{% endblock title %}
+
+{% block content %}
+    <h1>{{ 'view.form.title'|trans }}</h1>
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+
+    <input type="submit" />
+    {{ form_end(form) }}
+{% endblock content %}

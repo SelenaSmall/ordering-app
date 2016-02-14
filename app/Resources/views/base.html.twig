@@ -1,13 +1,25 @@
+{% trans_default_domain 'app' %}
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}{{ 'app.title'|trans }}{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
-        {% block body %}{% endblock %}
+       <header role="banner">
+           <h1>{{ 'app.title'|trans }}</h1>
+
+           <nav role="navigation">
+                <ul>
+                    <li><a href="{{ url('OrderBundle:form') }}">{{ 'view.form.title'|trans({}, 'OrderBundle') }}</a></li>
+                    <li><a href="{{ url('OrderBundle:list') }}">{{ 'view.list.title'|trans({}, 'OrderBundle') }}</a></li>
+                </ul>
+           </nav>
+
+       </header>
+        {% block content %}{% endblock %}
         {% block javascripts %}{% endblock %}
     </body>
 </html>

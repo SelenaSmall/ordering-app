@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+{% trans_default_domain 'OrderBundle' %}
+
+{% block title %}{{ 'view.view.title'|trans }}{% endblock title %}
+
+{% block content %}
+    <h1>{{ 'view.view.title'|trans }}</h1>
+
+    <article class="order full">
+        <dl>
+            <dt>{{ 'entity.order.name'|trans }}</dt>
+            <dd>{{ order.name }}</dd>
+            <dt>{{ 'entity.order.email'|trans }}</dt>
+            <dd>{{ order.email }}</dd>
+            <dt>{{ 'entity.order.address'|trans }}</dt>
+            <dd>{{ order.address }}</dd>
+            <dt>{{ 'entity.order.contents'|trans }}</dt>
+            <dd>{{ order.contents }}</dd>
+            <dt>{{ 'entity.order.createdAt'|trans }}</dt>
+            <dd>{{ order.createdAt|date('d/m/Y g:ia') }}</dd>
+        </dl>
+    </article>
+{% endblock content %}

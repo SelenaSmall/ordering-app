@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+{% trans_default_domain 'OrderBundle' %}
+
+{% block title %}{{ 'view.list.title'|trans }}{% endblock title %}
+
+{% block content %}
+    <h1>{{ 'view.list.title'|trans }}</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>{{ 'entity.order.name'|trans }}</th>
+                <th>{{ 'entity.order.createdAt'|trans }}</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+{% for order in orders %}
+            <tr>
+                <td>{{ order.name }}</td>
+                <td>{{ order.createdAt|date('d/m/Y g:ia') }}</td>
+                <td><a href="{{ url('OrderBundle:view', {uuid: order.uuid}) }}">{{ 'view.list.view_order'|trans }}</a></td>
+            </tr>
+{% endfor %}
+        </tbody>
+    </table>
+{% endblock content %}

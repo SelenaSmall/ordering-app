@@ -1,0 +1,3 @@
+app:
+    resource: "@OrderBundle/Controller"
+    type:     annotation
